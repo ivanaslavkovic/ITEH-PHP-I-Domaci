@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    background-color: #fffafa;
+}
+
+#naslov-index {
+    font-size: 48px;
+    margin-top: 30px;
+    margin-left: 780px;
+}
+
+#btn-add {
+    margin-left: 50px;
+    margin-top: 5px;
+    width: 300px;
+    font-size: 20px;
+}
+
+#forma-nova-posiljka {
+    width: 700px;
+    margin-left: 100px;
+}
