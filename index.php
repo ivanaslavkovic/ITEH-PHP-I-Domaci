@@ -20,6 +20,13 @@
         <a href="dodaj-posiljku.php"><button class="btn btn-success" id="btn-add">DODAJ POŠILJKU</button></a>
 
 
+        <div class="wrapper-tabela">
+            <?php
+            include 'tabela.php';
+            ?>
+        </div>
+
+
 
     </div>
 

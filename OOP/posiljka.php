@@ -1,5 +1,7 @@
 <?php
 
+include 'primalac.php';
+
 class Posiljka
 {
     public $id;
@@ -12,11 +14,18 @@ class Posiljka
 
     public function sacuvajPosiljku($connection, $ime_prezime, $adresa, $grad, $broj_telefona, $broj, $tezina, $cena, $status)
     {
-        $SQL1 = "insert into primalac values (null, '$ime_prezime', '$adresa', '$grad', '$broj_telefona')";
-        $connection->query($SQL1);
-        $primalac_id = $connection->insert_id;
+        $primalac = new Primalac();
+        $primalac_id = $primalac->sacuvajPrimaoca($connection, $ime_prezime, $adresa, $grad, $broj_telefona);
 
-        $SQL2 = "insert into posiljka values (null, '$broj', '$tezina', '$cena', '$status', '$primalac_id')";
-        return $connection->query($SQL2);
+        $SQL = "insert into posiljka values (null, '$broj', '$tezina', '$cena', '$status', '$primalac_id')";
+        return $connection->query($SQL);
+    }
+
+
+    public function svePosiljke($connection)
+    {
+        $SQL = "SELECT posiljka.*, primalac.* FROM posiljka JOIN primalac ON posiljka.primalac_id = primalac.id";
+
+        return $connection->query($SQL);
     }
 }
