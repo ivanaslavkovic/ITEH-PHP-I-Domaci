@@ -35,11 +35,11 @@
                          <?php
                             if ($posiljka->status == 'isporucena') {
                             ?>
-                             <button class="btn btn-success">Isporucena</button>
+                             <button class="btn btn-success" id="i-n-btn" name="isporucena" value="<?php echo $posiljka->pos_id ?>">Isporucena</button>
                          <?php
                             } else {
                             ?>
-                             <button class="btn btn-danger">Neisporucena</button>
+                             <button class="btn btn-danger" id="i-n-btn" name="neisporucena" value="<?php echo $posiljka->pos_id ?>">Neisporucena</button>
                          <?php
                             }
 

@@ -24,7 +24,15 @@ class Posiljka
 
     public function svePosiljke($connection)
     {
-        $SQL = "SELECT posiljka.*, primalac.* FROM posiljka JOIN primalac ON posiljka.primalac_id = primalac.id";
+        $SQL = "select posiljka.id as pos_id, posiljka.broj, posiljka.tezina, posiljka.cena, posiljka.status, posiljka.primalac_id, primalac.* from posiljka join primalac on posiljka.primalac_id = primalac.id";
+
+        return $connection->query($SQL);
+    }
+
+
+    public function promeniStatus($connection, $posiljka_id, $status)
+    {
+        $SQL = "update posiljka set status='" . $status  . "' where id=" . $posiljka_id . "";
 
         return $connection->query($SQL);
     }
