@@ -29,4 +29,30 @@ function funkcija() {
                 }
             });
     })
+
+
+
+    $(document).on('click', '#broj-posiljke-button-search', function () {
+
+        $.ajax(
+            {
+                url: 'DB/broj-posiljke-pretraga.php',
+                method: 'POST',
+                data: {
+                    broj_posiljke: $('#broj-posiljke-search').val(),
+                },
+
+                success: function (posiljke) {
+
+                    if (posiljke == 'Ne postoji pošiljka sa tim brojem!') {
+                        alert(posiljke)
+                    } else {
+                        $('tbody').html(posiljke)
+                    }
+                }
+            });
+    })
+
+
+
 }

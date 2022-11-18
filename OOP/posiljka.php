@@ -36,4 +36,13 @@ class Posiljka
 
         return $connection->query($SQL);
     }
+
+
+    public function pretragaPosiljke($connection, $broj_posiljke)
+    {
+        $SQL = "select posiljka.id as pos_id, posiljka.broj, posiljka.tezina, posiljka.cena, posiljka.status, posiljka.primalac_id, primalac.* from posiljka join primalac on posiljka.primalac_id = primalac.id
+         where posiljka.broj like '" . $broj_posiljke . "'";
+
+        return $connection->query($SQL);
+    }
 }

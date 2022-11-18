@@ -32,3 +32,18 @@ body {
     margin-top: 10px;
     margin-left: 50px;
 }
+
+#broj-posiljke-search {
+    position: absolute;
+    width: 300px;
+    margin-top: -38px;
+    margin-left: 1550px;
+}
+
+#broj-posiljke-button-search {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 1000px;
+}

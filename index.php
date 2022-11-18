@@ -19,6 +19,9 @@
 
         <a href="dodaj-posiljku.php"><button class="btn btn-success" id="btn-add">DODAJ POŠILJKU</button></a>
 
+        <input type="text" class="form-control" id="broj-posiljke-search">
+        <button class="btn btn-success" id="broj-posiljke-button-search">Pretraga</button>
+
 
         <div class="wrapper-tabela">
             <?php
