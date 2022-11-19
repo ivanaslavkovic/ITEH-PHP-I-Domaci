@@ -47,3 +47,12 @@ body {
     margin-top: 10px;
     margin-left: 1000px;
 }
+
+#cena-posiljke-button-sort {
+    position: absolute;
+    height: 40px;
+    left: 1150px;
+    top: 106px;
+    width: 180px;
+
+}

@@ -54,5 +54,32 @@ function funkcija() {
     })
 
 
+    $(document).on('click', '#cena-posiljke-button-sort', function () {
+
+        $.ajax(
+            {
+                url: 'DB/cena-posiljke-sort.php',
+                method: 'POST',
+                data: {
+                    sort: $(this).val(),
+                },
+
+                success: function (posiljke) {
+                    $('tbody').html(posiljke)
+
+                }
+            });
+
+        $(this).val() == 'ASC' ? $(this).val('DESC') : $(this).val('ASC')
+
+    })
+
+
+
+
+
+
+
+
 
 }

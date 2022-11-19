@@ -22,6 +22,8 @@
         <input type="text" class="form-control" id="broj-posiljke-search">
         <button class="btn btn-success" id="broj-posiljke-button-search">Pretraga</button>
 
+        <button class="btn btn-success" value="DESC" id="cena-posiljke-button-sort">SORT</button>
+
 
         <div class="wrapper-tabela">
             <?php
